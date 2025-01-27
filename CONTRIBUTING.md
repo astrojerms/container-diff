@@ -19,10 +19,10 @@ git remote add upstream git@github.com:astrojerms/container-diff.git
 ```
 
 The last command here sets the official repository as an upstream repository for
-your fork, so you can keep your fork in sync with `MASTER`:
+your fork, so you can keep your fork in sync with `main`:
 
 ```bash
-(container-diff) git pull upstream master && git push origin master
+(container-diff) git pull upstream main && git push origin main
 ```
 
 ## Building

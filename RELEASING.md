@@ -5,7 +5,7 @@ These triggers are setup via the Cloud Console, but the builds they execute live
 
 ## Continuous Builds
 
-Every commit to master is built and pushed automatically to a GCS location named via the COMMIT_SHA.
+Every commit to main is built and pushed automatically to a GCS location named via the COMMIT_SHA.
 
 ```shell
 $ gsutil ls gs://container-diff/builds/
@@ -45,7 +45,7 @@ This upload and aliases is handled automatically via the `cloudbuild-release.yam
 
 To perform a release, follow these steps:
 
-1. Select the `commit` to create the release at, preferably from the `master` branch.
+1. Select the `commit` to create the release at, preferably from the `main` branch.
 2. Create a new git `tag` and matching Github `release`, pointing to this commit.
   This can be done either through the UI or CLI.
 3. Write a descriptive release page.

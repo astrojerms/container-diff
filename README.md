@@ -4,7 +4,7 @@ This project is archived.
 - If you are looking for an alternative, try [diffoci](https://github.com/reproducible-containers/diffoci)
 
 [![Build
-Status](https://travis-ci.org/astrojerms/container-diff.svg?branch=master)](https://travis-ci.org/astrojerms/container-diff)
+Status](https://travis-ci.org/astrojerms/container-diff.svg?branch=main)](https://travis-ci.org/astrojerms/container-diff)
 
 ## What is container-diff?
 
@@ -263,7 +263,7 @@ type MultiVersionInfo struct {
 ```
 
 ## User Customized Output
-Users can customize the format of the output of diffs with the`--format` flag. The flag takes a Go template string, which specifies the format the diff should be output in. This template string uses the structs described above, depending on the differ used, to format output.  The default template strings container-diff uses can be found [here](https://github.com/astrojerms/container-diff/blob/master/util/template_utils.go).
+Users can customize the format of the output of diffs with the`--format` flag. The flag takes a Go template string, which specifies the format the diff should be output in. This template string uses the structs described above, depending on the differ used, to format output.  The default template strings container-diff uses can be found [here](https://github.com/astrojerms/container-diff/blob/main/util/template_utils.go).
 
 An example using the pip package analyzer is shown below, in which only package names are printed (some are repeated because of version differences).
 
@@ -461,7 +461,7 @@ In order to quickly make your own analyzer, follow these steps:
 - Are you trying to analyze packages?
     - Yes: Does the relevant package manager support different versions of the same package on one image?
         - Yes: Implement `getPackages` to collect all versions of all packages within an image in a `map[string]map[string]util.PackageInfo`. Use [`GetMultiVersionMapDiff`](https://github.com/astrojerms/container-diff/blob/0031c88993c9ac019e2d404815ef50c652d8d010/util/package_diff_utils.go#L119-L126) to diff map objects.  See [`differs/node_diff.go`](https://github.com/astrojerms/container-diff/blob/0031c88993c9ac019e2d404815ef50c652d8d010/differs/node_diff.go#L49-L93) or [`differs/pip_diff.go`](https://github.com/astrojerms/container-diff/blob/0031c88993c9ac019e2d404815ef50c652d8d010/differs/pip_diff.go#L48-L111) for examples.
-        -  No: Implement `getPackages` to collect all versions of all packages within an image in a `map[string]util.PackageInfo`. Use [`GetMapDiff`](https://github.com/astrojerms/container-diff/blob/31cec2304b54ae6ae444ccde4382b113d8e06097/util/package_diff_utils.go#L110-L117) to diff map objects.  See [`differs/apt_diff.go`](https://github.com/astrojerms/container-diff/blob/master/differs/apt_diff.go#L29).
+        -  No: Implement `getPackages` to collect all versions of all packages within an image in a `map[string]util.PackageInfo`. Use [`GetMapDiff`](https://github.com/astrojerms/container-diff/blob/31cec2304b54ae6ae444ccde4382b113d8e06097/util/package_diff_utils.go#L110-L117) to diff map objects.  See [`differs/apt_diff.go`](https://github.com/astrojerms/container-diff/blob/main/differs/apt_diff.go#L29).
     - No: Look to [History](https://github.com/astrojerms/container-diff/blob/0031c88993c9ac019e2d404815ef50c652d8d010/differs/history_diff.go) and [File System](https://github.com/astrojerms/container-diff/blob/0031c88993c9ac019e2d404815ef50c652d8d010/differs/file_diff.go) differs as models for diffing.
 
 2. Write your analyzer driver in the `differs` directory, such that you have a struct for your analyzer type and two methods for that analyzer: `Analyze` for single image analysis and `Diff` for comparison between two images:
