@@ -1,6 +1,6 @@
 # Releasing container-diff
 
-The github.com/GoogleContainerTools/container-diff uses Container Builder triggers to build and release binaries.
+The github.com/astrojerms/container-diff uses Container Builder triggers to build and release binaries.
 These triggers are setup via the Cloud Console, but the builds they execute live in this repo.
 
 ## Continuous Builds
@@ -46,11 +46,11 @@ This upload and aliases is handled automatically via the `cloudbuild-release.yam
 To perform a release, follow these steps:
 
 1. Select the `commit` to create the release at, preferably from the `master` branch.
-2. Create a new git `tag` and matching Github `release`, pointing to this commit.  
+2. Create a new git `tag` and matching Github `release`, pointing to this commit.
   This can be done either through the UI or CLI.
-3. Write a descriptive release page.  
+3. Write a descriptive release page.
   You can use the notes from the last release to help seed the template.
-3. Wait for the Container Builder release build to complete.  
+3. Wait for the Container Builder release build to complete.
  You can follow this in the [UI](https://cloud.google.com/gcr/triggers).
-4. Mirror the release artifacts to the Github release page.  
+4. Mirror the release artifacts to the Github release page.
  (Download them from GCS and re-upload them to Github).

@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/GoogleContainerTools/container-diff/pkg/util"
+	"github.com/astrojerms/container-diff/pkg/util"
 	"github.com/sirupsen/logrus"
 )
 

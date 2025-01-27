@@ -12,10 +12,10 @@ Once you have your environment set up, create a fork of the container-diff repos
 with your personal GitHub account. Then, clone the fork into your `$GOPATH`:
 
 ```bash
-git clone git@github.com:<your_account>/container-diff.git 
-$GOPATH/src/github.com/GoogleContainerTools/container-diff &&
-cd $GOPATH/src/github.com/GoogleContainerTools/container-diff &&
-git remote add upstream git@github.com:GoogleContainerTools/container-diff.git
+git clone git@github.com:<your_account>/container-diff.git
+$GOPATH/src/github.com/astrojerms/container-diff &&
+cd $GOPATH/src/github.com/astrojerms/container-diff &&
+git remote add upstream git@github.com:astrojerms/container-diff.git
 ```
 
 The last command here sets the official repository as an upstream repository for

@@ -1,4 +1,4 @@
-module github.com/GoogleContainerTools/container-diff
+module github.com/astrojerms/container-diff
 
 go 1.21
 

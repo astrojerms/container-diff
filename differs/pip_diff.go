@@ -24,8 +24,8 @@ import (
 	"regexp"
 	"strings"
 
-	pkgutil "github.com/GoogleContainerTools/container-diff/pkg/util"
-	"github.com/GoogleContainerTools/container-diff/util"
+	pkgutil "github.com/astrojerms/container-diff/pkg/util"
+	"github.com/astrojerms/container-diff/util"
 	"github.com/sirupsen/logrus"
 )
 
